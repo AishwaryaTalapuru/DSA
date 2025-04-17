@@ -12,6 +12,8 @@ class Solution:
         if len(nums) <= 1:
             return -1
         #Finding the potential element for the seocnd greatest element
+        #OR SECOND LARGEST INITIALLY SHOULD NOT BE EQUAL TO FIRST LARGEST AND SHOULD NOT MATCH ANY ELEMENT IN THE ARRAY (-2e9)
+        #Good time to ask the interviewer what is the range of values within the array
         second_greatest_elem = nums[0]
         start = 0
         while start < len(nums):
@@ -28,8 +30,8 @@ class Solution:
 #T.C = O(n)
 #S.C = O(1), where n is the length of the list "nums"
 sol = Solution()
-inputs = [[4, 4, 2, 1], [4, 4], [4], [], [7, 7, 7, 6]]
-outputs = [2, -1, -1, -1, 6]
+inputs = [[4, 4, 2, 1], [4, 4], [4], [], [7, 7, 7, 6], [-1, -2, -3, -4]]
+outputs = [2, -1, -1, -1, 6, -2]
 for ind in range(0, len(inputs)):
     actual = sol.get_second_greatest_elem(inputs[ind])
     if actual == outputs[ind]:
