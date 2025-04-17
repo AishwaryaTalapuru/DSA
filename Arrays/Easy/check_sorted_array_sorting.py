@@ -1,15 +1,15 @@
 #Given an array check if it is sorted in ascending or descending order
 class Solution:
     def check_ascending_order(self, nums):
-        for ind in range(1, len(nums)):
-            if nums[ind-1] > nums[ind]:
-                return False      
-        return True
+        res = sorted(nums)
+        if res==nums:
+            return True
+        return False
     def check_descending_order(self, nums):
-        for ind in range(1, len(nums)):
-            if nums[ind-1] < nums[ind]:
-                return False      
-        return True
+        res = sorted(nums, reverse=True)
+        if res==nums:
+            return True
+        return False
 
     def check_sorted_array(self, nums):
         if len(nums) == 0:
@@ -20,8 +20,8 @@ class Solution:
         return False
 sol = Solution()
 
-#T.C = O(n)
-#S.C = O(1) where n is the length of the array "nums"
+#T.C = O(nlogn)
+#S.C = O(n) where n is the length of the array "nums"
 
 sol = Solution()
 inputs = [[1, 2, 3, 4, 5], [5, 4, 3, 2, 1], [1, 2, 5, 4]]
