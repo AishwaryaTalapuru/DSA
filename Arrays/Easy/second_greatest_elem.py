@@ -28,8 +28,8 @@ class Solution:
 #T.C = O(n)
 #S.C = O(1), where n is the length of the list "nums"
 sol = Solution()
-inputs = [[4, 4, 2, 1], [4, 4], [4], []]
-outputs = [2, -1, -1, -1]
+inputs = [[4, 4, 2, 1], [4, 4], [4], [], [7, 7, 7, 6]]
+outputs = [2, -1, -1, -1, 6]
 for ind in range(0, len(inputs)):
     actual = sol.get_second_greatest_elem(inputs[ind])
     if actual == outputs[ind]:
