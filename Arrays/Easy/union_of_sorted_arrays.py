@@ -24,8 +24,8 @@ class Solution:
 
 
 
-#T.C = O(n)
-#S.C = O(n), where n is the length of the list "nums"
+#T.C = O(n+m)
+#S.C = O(n+m), where n, m are the lengths of the list "nums1" and "nums2" respectively
 sol = Solution()
 inputs = [[[], []], [[], [1, 2, 2, 3, 3, 4]], [[1, 1, 2, 2, 3], [2, 2, 4, 4, 5]]]
 outputs = [[], [1, 2, 3, 4], [1, 2, 3, 4, 5]]
